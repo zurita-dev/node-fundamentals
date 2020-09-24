@@ -9,7 +9,8 @@ function router(req, res) {
   res.writeHead(201, { 'Content-Type': 'text/plain' });
   switch (req.url) {
     case '/saludo':
-      res.write('Conexión exitosa.');
+      let saludo = hola();
+      res.write(saludo);
       break;
     default:
       res.write('404');
@@ -19,3 +20,9 @@ function router(req, res) {
 }
 
 console.log(`Escuchando Http en el puerto: ${process.env.PORT}`);
+
+function hola(){
+  return 'Hola que tal!'
+}
+
+// node --inspect modulos/http.js
