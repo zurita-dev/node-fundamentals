@@ -16,7 +16,6 @@ const puppeter = require('puppeteer');
   });
 
   console.log('titulo1 :>> ', titulo1);
-
   console.log('Cerramos navegador...');
   browser.close();
   console.log('Navegador cerrado');
